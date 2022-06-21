@@ -1,0 +1,38 @@
+.error {
+  text-align: center;
+
+  &__heading {
+    font-size: 70px;
+
+    &--sub {
+      font-size: 20px;
+      text-transform: capitalize;
+    }
+  }
+
+  &__content {
+    margin: 20px 0 40px 0;
+  }
+
+  &__holder {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__button {
+    width: 150px;
+    height: 40px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: capitalize;
+    background-color: rgb(100, 139, 139);
+    color: #fff;
+    transition: all 0.2s;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+}

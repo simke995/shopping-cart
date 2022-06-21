@@ -1,0 +1,50 @@
+.about {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+
+  &__heading {
+    font-size: 48px;
+    text-align: center;
+
+    &--sub {
+      font-size: 32px;
+      margin-bottom: 30px;
+    }
+  }
+
+  &__hr {
+    width: 200px;
+    margin: auto;
+    border: none;
+    height: 2px;
+    background-color: #000;
+  }
+
+  &__content {
+    font-weight: 600;
+    margin: 30px 0;
+    font-style: italic;
+    color: #000;
+  }
+
+  &__paragraph {
+    color: #000;
+
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .about {
+    &__heading {
+      font-size: 42px;
+
+      &--sub {
+        font-size: 24px;
+      }
+    }
+  }
+}
