@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { GiMagnifyingGlass } from "react-icons/gi";
+import { MdAddShoppingCart } from "react-icons/md";
 import { useDispatch } from "react-redux";
 import { cartActions } from "../../features/cart/cartSlice";
 
@@ -23,16 +23,20 @@ const Product = ({ id, name, price, image }) => {
   return (
     <li className={styles.product}>
       <img className={styles["product__image"]} src={image} alt={name} />
-      <Link className={styles["product__link"]} to={`/products-list/${id}`}>
-        <GiMagnifyingGlass />
-      </Link>
+      <button
+        className={styles["product__add"]}
+        onClick={() => addCartHandler({ id, name, price, image })}
+      >
+        <MdAddShoppingCart />
+      </button>
       <div className={styles["product__footer"]}>
         <h4 className={styles["product__title"]}>{name}</h4>
         <p className={styles["product__price"]}>${finalPrice}</p>
       </div>
-      <button onClick={() => addCartHandler({ id, name, price, image })}>
-        add to cart
-      </button>
+      <Link className={styles["product__link"]} to={`/products-list/${id}`}>
+        more details
+      </Link>
+
       {/* <Link
         to={`/products-list/${id}`}
         className={`${styles["product__link"]} ${styles["product__link--sub"]}`}
