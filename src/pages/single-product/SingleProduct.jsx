@@ -26,7 +26,12 @@ const SingleProduct = () => {
 
   const addCartHandler = (item) => {
     dispatch(
-      cartActions.addToCart({ ...item, quantity: 1, totalPrice: price })
+      cartActions.addToCart({
+        ...item,
+        image: item.images[0].thumbnails.large.url,
+        quantity: 1,
+        totalPrice: price,
+      })
     );
   };
 

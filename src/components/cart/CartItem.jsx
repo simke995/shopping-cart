@@ -5,11 +5,11 @@ import { cartActions } from "../../features/cart/cartSlice";
 // styles
 import styles from "./CartItem.module.scss";
 
-const CartItem = ({ id, price, name, images, quantity, totalPrice }) => {
+const CartItem = ({ id, price, name, image, quantity, totalPrice }) => {
   const dispatch = useDispatch();
   const priceFinal = price.toFixed(2) / 10;
   const totalPriceFinal = totalPrice.toFixed(2) / 10;
-  const imgSrc = images[0].thumbnails.large.url;
+  const imgSrc = image;
 
   const removeCartHandler = () => {
     dispatch(cartActions.removeFromCart({ id, quantity, totalPrice }));
